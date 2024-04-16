@@ -9,5 +9,5 @@
 <ul>
     <li>Id: @product.Id</li>
     <li>Name: @product.Name</li>
-    <li>Price: @product.Price</li>
+    <li style="color: @(product.Price < 10 ? "red" : "green");">Price: @product.Price</li>
 </ul>
