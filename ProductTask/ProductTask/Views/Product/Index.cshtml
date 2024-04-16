@@ -1,0 +1,17 @@
+﻿@using ProductTask.Models;
+
+@{
+    List<Product> products = ViewBag.Products;
+}
+<h1>Products</h1>
+
+<ul>
+    @foreach (var product in products)
+    {
+        <li>
+            <a href="@Url.Action("Details", "Product", new { id = product.Id })" style="color: @(product.Price < 10 ? "red" : "green")">
+                @product.Name
+            </a>
+        </li>
+    }
+</ul>
